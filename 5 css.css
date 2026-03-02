@@ -1,0 +1,85 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background: #333;
+    padding: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    background: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+/* Fieldset styling */
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 6px;
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    display: block;
+    margin: 6px 0;
+}
+
+/* Input type range */
+input[type="range"] {
+    width: 60%;
+}
+
+/* Fancy button */
+button.fancyBtn {
+    background-color: #bddbfa;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+button.fancyBtn:hover {
+    background-color: #a7c8f0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #eee;
+    margin-top: 20px;
+}

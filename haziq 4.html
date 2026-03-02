@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diecast Store</title>
+    <link rel="stylesheet" href="4 css.css">
+
+    <style>
+        /* Body with image background */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url("segg_1.jpg") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Main content card */
+        main {
+            background: #ffffff;
+            padding: 20px;
+            margin: 15px auto;
+            max-width: 900px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+        }
+
+        header, footer {
+            text-align: center;
+            padding: 8px 0;
+            background: rgba(255, 255, 255, 0.9);
+            font-size: 0.9rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            font-size: 0.9rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Small grey buttons */
+        .btn {
+            display: inline-block;
+            padding: 4px 8px;
+            margin: 2px;
+            background-color: #888888;
+            color: white;
+            font-size: 0.8rem;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #666666;
+        }
+
+        /* Similar products section */
+        .similar-section {
+            margin-top: 30px;
+            padding: 15px;
+            border-top: 2px solid #ccc;
+            background-color: #fdfdfd;
+            border-radius: 6px;
+        }
+        .similar-section h3 {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: #333;
+        }
+        #similar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+        .box {
+            border: 1px solid #ccc;
+            padding: 8px;
+            width: 160px; /* smaller box */
+            text-align: center;
+            border-radius: 6px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .box:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+        }
+        .box img {
+            width: 140px; /* smaller image */
+            height: auto;
+            border-radius: 4px;
+        }
+        .actions {
+            margin-top: 6px;
+        }
+        .actions button {
+            margin: 2px;
+        }
+
+        /* Price styling */
+        .price {
+            font-weight: bold;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        /* Floating button */
+        .floating-btn {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            background-color: #ff6600;
+            color: #fff;
+            padding: 10px 16px;
+            border-radius: 40px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .floating-btn:hover {
+            background-color: #e65c00;
+            transform: scale(1.08);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div id="topHeaderRow">
+        <a href="account.html">My Account</a>
+        <a href="#">Wish List</a>
+        <a href="#">Shopping Cart</a>
+        <a href="#">Checkout</a>
+    </div>
+
+    <h1>Diecast Store</h1>
+
+    <nav id="mainNavigationRow">
+        <ul>
+            <li><a href="diecast shop.html">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Works</a></li>
+            <li><a href="#">Designers</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h2>Dodge Viper ACR Extreme Aero</h2>
+
+    <figure>
+        <img src="DodgeViperACR.jpg.jpeg" alt="Dodge Viper ACR Extreme Aero" width="250">
+    </figure>
+
+    <div id="info">
+        <p>
+            Dodge Viper ACR (American Club Racer) with the Extreme Aero Package is the ultimate, 
+			track-focused iteration of the final-gen Viper, designed to be a street-legal race car. 
+			It features a 645-hp, 8.4L V10 engine, unique Bilstein coilover suspension, and carbon ceramic brakes. 
+			The package adds massive downforce, specialized tires, and aggressive styling for maximum track performance.
+        </p>
+
+        <p class="price">RM 39.90</p>
+
+        <div id="buttons">
+            <button class="btn">View</button>
+            <button class="btn">Add to Wishlist</button>
+            <button class="btn">Add to Cart</button>
+        </div>
+
+        <h3>Product Details</h3>
+        <table>
+            <tr>
+                <th>Date Release:</th>
+                <td>2017</td>
+            </tr>
+            <tr>
+                <th>Make:</th>
+                <td>Dodge</td>
+            </tr>
+            <tr>
+                <th>Dimensions:</th>
+                <td>6.7 cm x 2.5 cm x 2.5 cm</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Similar Products Section -->
+    <div class="similar-section">
+        <h3>Similar Products</h3>
+        <div id="similar">
+            <div class="box">
+                <img src="NissanGT-RNismoGT3.jpg.jpeg" title="Nissan GT-R Nismo GT3" alt="Nissan GT-R Nismo GT3">
+                <p>Nissan GT-R Nismo GT3</p>
+                <div class="actions">
+                    <button class="btn">View</button>
+                    <button class="btn">Wishlist</button>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="NissanZ.jpg.jpeg" title="Nissan Z (2023)" alt="Nissan Z (2023)">
+                <p>Nissan Z (2023)</p>
+                <div class="actions">
+                    <button class="btn">View</button>
+                    <button class="btn">Wishlist</button>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="MazdaMX-5Miata.jpg.jpeg" title="Mazda MX-5 Miata" alt="Mazda MX-5 Miata">
+                <p>Mazda MX-5 Miata</p>
+                <div class="actions">
+                    <button class="btn">View</button>
+                    <button class="btn">Wishlist</button>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="KoenigseggJesko.jpg.jpeg" title="Koenigsegg Jesko Attack" alt="Koenigsegg Jesko Attack">
+                <p>Koenigsegg Jesko Attack</p>
+                <div class="actions">
+                    <button class="btn">View</button>
+                    <button class="btn">Wishlist</button>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    All images are copyright to their owners.
+    This is just a hypothetical site © 2026 Copyright Diecast Store
+</footer>
+
+<!-- Floating Button -->
+<button class="floating-btn">Checkout</button>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #ffd1dc, #c8f7ff, #fff2b2, #d8b2ff, #b2ffc8);
+        background-size: 1000% 1000%;
+        animation: gradientShift 15s ease infinite;
+        position: relative;
+    }
+
+    @keyframes gradientShift {
+        0% {background-position: 0% 50%;}
+        50% {background-position: 100% 50%;}
+        100% {background-position: 0% 50%;}
+    }
+
+    /* Title WELCOME di atas */
+    .title {
+        text-align: center;
+        font-size: 48px;
+        color: #2e7d32;
+        margin: 30px 0;
+        letter-spacing: 2px;
+    }
+
+    /* Button About Us atas kanan */
+    .about-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        text-decoration: none;
+        background: #2e7d32;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 10px;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+
+    .about-btn:hover {
+        background: #1b5e20;
+    }
+
+    /* Kotak tengah */
+    .container {
+        max-width: 500px;
+        margin: 100px auto; /* kotak lebih ke tengah page secara vertikal */
+        background: rgba(255,255,255,0.85);
+        padding: 40px 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        text-align: center;
+    }
+
+    .container h2 {
+        color: #2e7d32;
+        margin-bottom: 30px;
+    }
+
+    .container a {
+        display: inline-block;
+        text-decoration: none;
+        background: #2e7d32;
+        color: white;
+        padding: 12px 25px;
+        margin: 10px;
+        border-radius: 10px;
+        transition: 0.3s;
+        font-size: 16px;
+    }
+
+    .container a:hover {
+        background: #1b5e20;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+        .title {
+            font-size: 36px;
+        }
+
+        .container {
+            width: 90%;
+            padding: 30px 20px;
+        }
+
+        .container a {
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+
+        .about-btn {
+            padding: 10px 18px;
+            font-size: 14px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<!-- Title WELCOME -->
+<h1 class="title">WELCOME</h1>
+
+<!-- Button About Us atas kanan -->
+<a href="about.html" class="about-btn">About Us</a>
+
+<!-- Kotak Tengah untuk button lain / info -->
+<div class="container">
+    <h2>Main Menu</h2>
+    <a href="member1.html">Member 1 Job Sheet</a>
+    <a href="member2.html">Member 2 Job Sheet</a>
+</div>
+
+</body>
+</html>
