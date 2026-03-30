@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu Example</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+}
+
+/* Menu button */
+#menuButton{
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Menu style */
+.menu{
+    display: none;
+    margin-top: 10px;
+    width: 200px;
+}
+
+.menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li{
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.menu a{
+    text-decoration: none;
+    color: black;
+}
+</style>
+
+</head>
+
+<body>
+
+<button id="menuButton">Menu</button>
+
+<div class="menu" id="menu">
+<ul>
+<li><a href="#">1. Home</a></li>
+<li><a href="#">2. Profile</a></li>
+<li><a href="#">3. Services</a></li>
+<li><a href="#">4. About</a></li>
+<li><a href="#">5. Contact</a></li>
+</ul>
+</div>
+
+<script>
+const button = document.getElementById("menuButton");
+const menu = document.getElementById("menu");
+
+button.addEventListener("click", function(){
+    if(menu.style.display === "block"){
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+});
+</script>
+
+</body>
+</html>

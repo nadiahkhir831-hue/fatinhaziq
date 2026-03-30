@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search with JS Button</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #007bff, #ffd700); /* blue to yellow gradient */
+    }
+
+    .search-container {
+      width: 80%;
+      max-width: 400px;
+      display: flex;
+      margin-bottom: 50px;
+    }
+
+    input[type="text"] {
+      flex: 1;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px 0 0 5px;
+      outline: none;
+    }
+
+    .search-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      border-radius: 0 5px 5px 0;
+      transition: background-color 0.3s;
+    }
+
+    .search-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .test-btn {
+      position: fixed;
+      bottom: 20px;
+      padding: 15px 30px;
+      font-size: 16px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .test-btn:hover {
+      background-color: #1e7e34;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="search-container">
+    <input type="text" placeholder="Search...">
+    <button class="search-btn">Search</button>
+  </div>
+
+  <button class="test-btn">Click Me to Change Me</button>
+
+  <script>
+    let btn = document.querySelector(".test-btn");
+
+    function firstFunction(e, name){
+        e.preventDefault();
+        btn.innerHTML = name;
+    }
+
+    btn.addEventListener("click", function(e){
+        firstFunction(e, "Mohd Haziq");
+        btn.style.backgroundColor = "blue";
+    });
+  </script>
+
+</body>
+</html>

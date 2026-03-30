@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<title>Tambah ke Troli (Add to Cart)</title>
+</head>
+
+<body>
+
+<div class="utama">
+
+    <!-- Page Title -->
+    <h1 class="shop-title">Luxury Car Shop</h1>
+
+    <!-- Product Section -->
+    <div class="pertama">
+        <table>
+            <tr>
+                <th>Cars for Sale</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+
+            <tr>
+                <td>Nissan GT-R Nismo</td>
+                <td>RM35.00</td>
+                <td>
+                    <button class="beli"><i class="fa-solid fa-cart-arrow-down"></i> Beli</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Alfa Romeo 4C</td>
+                <td>RM50.00</td>
+                <td>
+                    <button class="beli"><i class="fa-solid fa-cart-arrow-down"></i> Beli</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Aston Martin Valkyrie</td>
+                <td>RM75.00</td>
+                <td>
+                    <button class="beli"><i class="fa-solid fa-cart-arrow-down"></i> Beli</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Mazda RX-7 Spirit R</td>
+                <td>RM40.00</td>
+                <td>
+                    <button class="beli"><i class="fa-solid fa-cart-arrow-down"></i> Beli</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Lamborghini Veneno</td>
+                <td>RM100.00</td>
+                <td>
+                    <button class="beli"><i class="fa-solid fa-cart-arrow-down"></i> Beli</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Checkout / Cart Section -->
+    <div class="kedua">
+        <h3>Car</h3>
+        <div class="kandungan-kedua">
+            <div data-car="Alfa Romeo 4C">
+                Alfa Romeo 4C (1x)
+                <button class="buang"><i class="fa-solid fa-trash"></i> Buang</button>
+            </div>
+        </div>
+
+        <div class="jumlah">
+            <strong>Jumlah: RM50</strong>
+        </div>
+
+        <!-- Kosongkan button -->
+        <button id="kosongkan"><i class="fa-solid fa-trash-can"></i> Kosongkan</button>
+    </div>
+
+</div>
+
+<script src="./index2.js"></script>
+
+</body>
+</html>

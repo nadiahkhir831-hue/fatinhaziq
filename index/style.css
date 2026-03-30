@@ -1,0 +1,148 @@
+/* Reset and basic */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+/* Main container */
+.utama {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Page Title */
+.shop-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 36px;
+    color: #222;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Table for products */
+.pertama table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.pertama th, .pertama td {
+    padding: 14px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.pertama th {
+    background-color: #111;
+    color: white;
+    font-size: 16px;
+}
+
+/* Beli button */
+.beli {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.beli i {
+    margin-right: 6px;
+}
+
+.beli:hover {
+    background-color: #0d6efd;
+}
+
+/* Checkout / Cart box */
+.kedua {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.kedua h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #111;
+}
+
+/* Cart items */
+.kandungan-kedua div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Buang button */
+.buang {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.buang i {
+    margin-right: 4px;
+}
+
+.buang:hover {
+    background-color: #e60000;
+}
+
+/* Total amount */
+.jumlah {
+    margin-top: 12px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Kosongkan button */
+#kosongkan {
+    margin-top: 12px;
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    width: 100%;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+#kosongkan i {
+    margin-right: 6px;
+}
+
+#kosongkan:hover {
+    background-color: #333;
+}

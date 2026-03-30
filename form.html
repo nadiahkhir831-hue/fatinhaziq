@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <title>Borang Input</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      width: 320px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #555;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    input[type="range"] {
+      padding: 0;
+    }
+    /* Make the color picker bigger */
+    input[type="color"] {
+      width: 100%;
+      height: 50px;
+      cursor: pointer;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Borang Input</h2>
+    <form>
+      <label for="nama">Masukkan nama:</label>
+      <input type="text" id="nama" name="nama" placeholder="Masukkan nama anda">
+
+      <label for="email">Masukkan email:</label>
+      <input type="email" id="email" name="email" placeholder="Masukkan email anda">
+
+      <label for="phone">Masukkan No HP:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Masukkan nombor telefon">
+
+      <label for="website">Masukkan website:</label>
+      <input type="url" id="website" name="website" placeholder="Masukkan alamat website">
+
+      <label for="angka">Masukkan angka:</label>
+      <input type="number" id="angka" name="angka" placeholder="Masukkan nombor">
+
+      <label for="tahap">Pilih tahap:</label>
+      <input type="range" id="tahap" name="tahap" min="0" max="100">
+
+      <label for="tarikh">Masukkan tarikh:</label>
+      <input type="date" id="tarikh" name="tarikh">
+
+      <label for="warna">Pilih warna:</label>
+      <input type="color" id="warna" name="warna">
+
+      <button type="submit">Kirim!</button>
+    </form>
+  </div>
+</body>
+</html>
