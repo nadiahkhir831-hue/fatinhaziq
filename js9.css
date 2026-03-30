@@ -47,12 +47,21 @@ input{
 }
 
 .summary{
+    width:100%;
+    margin-top:20px;
+    background:#f57c00;
+    color:white;
+    padding:15px;
+    box-sizing:border-box;
+}
+
+/* .summary{
     width:300px;
     margin-left:auto;
     margin-top:20px;
     background:#f5e6d3;
     padding:15px;
-}
+} */
 
 .summary p{
     display:flex;
