@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Edit Art Work</title>
+<link rel="stylesheet" href="js8.css">
+</head>
+
+<body>
+
+<div class="form-container">
+    <h1>Edit Art Work Details</h1>
+
+    <form id="artForm">
+
+        <label>Title</label>
+        <div class="input-group">
+            <input type="text" id="title">
+            <span class="error-icon">!</span>
+        </div>
+
+        <label>Description</label>
+        <div class="input-group">
+            <textarea id="description"></textarea>
+            <span class="error-icon">!</span>
+        </div>
+
+        <div class="row">
+            <div class="left">
+
+                <label>Genre</label>
+                <select>
+                    <option>Choose genre</option>
+                </select>
+
+                <label>Subject</label>
+                <select>
+                    <option>Choose subject</option>
+                </select>
+
+                <label>Medium</label>
+                <input type="text">
+
+                <label>Year</label>
+                <div class="input-group small">
+                    <input type="text" id="year">
+                    <span class="error-icon">!</span>
+                </div>
+
+                <label>Museum</label>
+                <input type="text">
+
+            </div>
+
+            <div class="right">
+                <div class="box">
+                    <label>Type</label>
+                    <input type="radio" name="type" checked> Painting<br>
+                    <input type="radio" name="type"> Sculpture
+                </div>
+
+                <div class="box">
+                    <label>Image Creative Commons Specification</label><br>
+                    <input type="checkbox"> Attribution<br>
+                    <input type="checkbox"> Noncommercial<br>
+                    <input type="checkbox"> No Derivative Works<br>
+                    <input type="checkbox"> Share Alike
+                </div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button type="submit">Submit</button>
+            <button type="reset">Clear Form</button>
+        </div>
+
+    </form>
+</div>
+
+<script src="script8.js"></script>
+</body>
+</html>

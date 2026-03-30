@@ -1,0 +1,54 @@
+body{
+    font-family: Arial;
+    background:#eee;
+}
+
+.container{
+    width:700px;
+    margin:30px auto;
+    background:#f5e6d3;
+    padding:15px;
+    box-shadow:0 0 5px rgba(0,0,0,0.2);
+}
+
+h2{
+    margin-bottom:10px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:#f57c00;
+    color:white;
+}
+
+th{
+    padding:10px;
+    text-align:left;
+    border-right:1px solid #ccc;
+}
+
+td{
+    padding:10px;
+}
+
+input{
+    width:50px;
+}
+
+.summary{
+    margin-top:20px;
+    text-align:right;
+}
+
+.summary p{
+    margin:5px 0;
+}
+
+.total{
+    color:#d84315;
+    font-weight:bold;
+}
