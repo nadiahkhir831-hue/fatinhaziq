@@ -104,3 +104,12 @@ button{
     cursor:pointer;
     font-weight:bold;
 }
+
+ label {
+    display: flex;
+    align-items: center;
+}
+
+label input {
+    margin-right: 8px;
+}
