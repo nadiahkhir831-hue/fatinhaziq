@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Edit Diecast Model</title>
+<link rel="stylesheet" href="diecastform.css">
+</head>
+
+<body>
+
+<div class="form-container">
+    <h1>Edit Diecast Model Details</h1>
+
+    <form id="diecastForm">
+
+        <label>Model Name</label>
+        <div class="input-group">
+            <input type="text" id="modelName">
+            <span class="error-icon">!</span>
+        </div>
+
+        <label>Description</label>
+        <div class="input-group">
+            <textarea id="description"></textarea>
+            <span class="error-icon">!</span>
+        </div>
+
+        <div class="row">
+            <div class="left">
+
+                <label>Brand</label>
+                <select id="brand">
+                    <option>Choose brand</option>
+                    <option>Hot Wheels</option>
+                    <option>Matchbox</option>
+                    <option>Tomica</option>
+                    <option>Maisto</option>
+                </select>
+
+                <label>Scale</label>
+                <select id="scale">
+                    <option>Choose scale</option>
+                    <option>1:18</option>
+                    <option>1:24</option>
+                    <option>1:43</option>
+                    <option>1:64</option>
+                </select>
+
+                <label>Year of Release</label>
+                <div class="input-group small">
+                    <input type="text" id="year">
+                    <span class="error-icon">!</span>
+                </div>
+
+                <label>Collection</label>
+                <input type="text" id="collection">
+
+            </div>
+
+            <!-- RIGHT -->
+            <div class="right">
+
+                <fieldset>
+                    <legend>Type</legend>
+                    <label><input type="radio" name="type" checked> Car</label><br>
+                    <label><input type="radio" name="type"> Truck</label><br>
+                    <label><input type="radio" name="type"> Motorcycle</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Special Features</legend>
+                    <label><input type="checkbox"> Limited Edition</label><br>
+                    <label><input type="checkbox"> Collector’s Item</label><br>
+                    <label><input type="checkbox"> Custom Paint</label><br>
+                    <label><input type="checkbox"> Opening Doors</label>
+                </fieldset>
+
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button type="submit">Submit</button>
+            <button type="reset">Clear Form</button>
+        </div>
+
+    </form>
+</div>
+
+<script src="diecastform.js"></script>
+</body>
+</html>
