@@ -1,38 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Share Your Travels</title>
-<link rel="stylesheet" href="stylefatin.css">
+  <meta charset="UTF-8">
+  <title>Share Your Travels</title>
+  <link rel="stylesheet" href="stylefatin.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
 <header>
-    <div class="logo">Share Your Travel</div>
-    <div class="menu">☰</div>
+  <h1>Share Your Travels</h1>
+  <div class="menu-icon">&#9776;</div>
 </header>
 
-<div class="container">
+<main class="container">
+  
+  <!-- Main Image -->
+  <div class="main-image">
+    <img id="displayedImage" src="colosseum.jpg" alt="Ancient Amphitheater">
+    <p id="caption" class="caption">Ancient Amphitheater</p>
+  </div>
 
-    <!-- Main Image -->
-    <div class="main-image">
-        <img id="featured-image" src="colosseum.jpg" title="Ancient Amphitheater">
-        <div class="caption" id="caption">Ancient Amphitheater</div>
-    </div>
+  <!-- Thumbnail Gallery -->
+  <div class="thumbnail-container">
+    <img src="colosseum.jpg" data-full="colosseum.jpg" data-caption="Ancient Amphitheater">
+    <img src="trevi-fountain.jpg" data-full="trevi-fountain.jpg" data-caption="Famous fountain">
+    <img src="Pantheon.jpg" data-full="Pantheon.jpg" data-caption="Pantheon">
+    <img src="vatican-museums.jpg" data-full="vatican-museums.jpg" data-caption="Museums">
+    <img src="Piazza-Navona.jpg" data-full="Piazza-Navona.jpg" data-caption="Baroque art">
+  </div>
 
-    <!-- Gallery -->
-    <div class="gallery">
-        <img src="trevi fountain.jpg" title="Famous fountain">
-        <img src="vatican museums.jpg" title="Museums">
-        <img src="Pantheon.jpg" title="Pantheon">
-        <img src="Piazza Navona.jpg" title="Baroque art">
-        <img src="Forum Romanum & Palatine.jpg" title="archaeological sites">
-    </div>
+</main>
 
-</div>
+<script>
+const displayedImage = document.getElementById('displayedImage');
+const caption = document.getElementById('caption');
+const thumbnails = document.querySelectorAll('.thumbnail-container img');
 
-<script src="Lab8.js"></script>
+thumbnails.forEach(thumb => {
+  thumb.addEventListener('click', () => {
+    displayedImage.src = thumb.dataset.full;
+    caption.textContent = thumb.dataset.caption;
+  });
+});
+</script>
 
 </body>
 </html>
