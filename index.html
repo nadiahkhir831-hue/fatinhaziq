@@ -3,25 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neon Main Page</title>
+
+<title>Project 20%</title>
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+
+/* RESET */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
+/* BODY */
 body{
-    font-family:Arial, sans-serif;
+    font-family:'Poppins',sans-serif;
     color:white;
     display:flex;
     flex-direction:column;
     min-height:100vh;
-    background:linear-gradient(135deg,#000000,#0f0c29,#302b63,#24243e);
+    overflow-x:hidden;
+
+    background:linear-gradient(-45deg,#000000,#0f0c29,#302b63,#24243e);
+    background-size:400% 400%;
+    animation:bgMove 15s ease infinite;
 }
 
-/* CANVAS BACKGROUND */
+/* BACKGROUND ANIMATION */
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* CANVAS */
 #space{
     position:fixed;
     top:0;
@@ -35,15 +53,15 @@ body{
 header{
     text-align:center;
     padding:40px 20px;
-    background:rgba(0,0,0,0.5);
-    backdrop-filter:blur(10px);
-    box-shadow:0 0 20px #00fff0;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,0.1);
 }
 
 header h1{
-    font-size:3em;
+    font-size:2.8em;
     color:#00fff0;
-    text-shadow:0 0 10px #00fff0, 0 0 20px #00fff0;
+    text-shadow:0 0 10px #00fff0;
 }
 
 /* NAV */
@@ -53,83 +71,100 @@ nav{
 
 nav a{
     text-decoration:none;
-    margin:0 15px;
-    font-weight:bold;
-    color:#ff00ff;
-    text-shadow:0 0 5px #ff00ff, 0 0 10px #ff00ff;
+    margin:0 10px;
+    padding:10px 20px;
+    border-radius:30px;
+    font-weight:600;
+    color:#fff;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.2);
     transition:0.3s;
 }
 
 nav a:hover{
-    color:#00ff00;
-    text-shadow:0 0 10px #00ff00, 0 0 20px #00ff00;
+    background:#00fff0;
+    color:black;
+    box-shadow:0 0 15px #00fff0;
 }
 
 /* MAIN */
 main{
     flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     padding:40px 20px;
-    text-align:center;
 }
 
-main h2{
+/* GLASS CARD */
+.card{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(20px);
+    padding:40px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,0.1);
+    max-width:700px;
+    text-align:center;
+    box-shadow:0 0 40px rgba(0,255,255,0.1);
+}
+
+.card h2{
     font-size:2em;
     color:#ff00ff;
-    text-shadow:0 0 10px #ff00ff, 0 0 20px #ff00ff;
     margin-bottom:20px;
 }
 
-main p{
-    font-size:1.2em;
-    color:#00fff0;
-    text-shadow:0 0 5px #00fff0;
+.card p{
+    font-size:1.1em;
+    color:#ddd;
     line-height:1.8;
-    max-width:700px;
-    margin:0 auto 20px auto;
 }
 
 /* FOOTER */
 footer{
     text-align:center;
     padding:20px;
-    background:rgba(0,0,0,0.5);
+    background:rgba(255,255,255,0.05);
     backdrop-filter:blur(10px);
-    box-shadow:0 -0 20px #ff00ff;
-    color:#ff00ff;
-    text-shadow:0 0 5px #ff00ff, 0 0 10px #ff00ff;
+    font-size:0.9em;
+    color:#aaa;
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- BACKGROUND ANIMATION -->
+<!-- BACKGROUND -->
 <canvas id="space"></canvas>
 
 <header>
-    <h1>Welcome to our JobSheet Website Submit</h1>
+    <h1>🚀 PROJECT 20%/h1>
     <nav>
-        <a href="about.html">About Us</a>
+        <a href="#">Home</a>
+        <a href="about.html">About</a>
     </nav>
 </header>
 
 <main>
-    <h2>Introduction</h2>
-    <p>
-        This is our JobSheet submission website.
-    </p>
-    <p>
-        We created this website to show our progress 
-        for our lecturers. This helps prevent lost assignments and 
-        keeps the submission process more organized.
-    </p>
+    <div class="card">
+        <h2>Introduction</h2>
+        <p>
+            This is our JobSheet submission website.
+        </p>
+        <p>
+            We created this website to show our progress 
+            for our lecturers. This helps prevent lost assignments and 
+            keeps the submission process more organized.
+        </p>
+    </div>
 </main>
 
 <footer>
-    <p>© 2026 JobSheet Website</p>
+    <p>© 2026 JobSheet</p>
 </footer>
 
-<!-- STAR ANIMATION SCRIPT -->
+<!-- STAR ANIMATION -->
 <script>
 const canvas = document.getElementById("space");
 const ctx = canvas.getContext("2d");
@@ -139,11 +174,11 @@ canvas.height = window.innerHeight;
 
 let stars = [];
 
-for(let i=0;i<150;i++){
+for(let i=0;i<180;i++){
     stars.push({
         x:Math.random()*canvas.width,
         y:Math.random()*canvas.height,
-        radius:Math.random()*1.5,
+        radius:Math.random()*1.2,
         alpha:Math.random(),
         speed:Math.random()*0.02
     });
@@ -154,11 +189,13 @@ function animate(){
 
     stars.forEach(star=>{
         star.alpha += star.speed;
-        if(star.alpha<=0 || star.alpha>=1) star.speed = -star.speed;
+        if(star.alpha <= 0 || star.alpha >= 1){
+            star.speed *= -1;
+        }
 
         ctx.beginPath();
         ctx.arc(star.x,star.y,star.radius,0,Math.PI*2);
-        ctx.fillStyle = "rgba(255,255,255,"+star.alpha+")";
+        ctx.fillStyle = "rgba(255,255,255," + star.alpha + ")";
         ctx.fill();
     });
 
@@ -175,4 +212,3 @@ window.addEventListener("resize",()=>{
 
 </body>
 </html>
-
