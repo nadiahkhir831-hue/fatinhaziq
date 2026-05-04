@@ -3,255 +3,248 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fatin's Jobsheet</title>
+<title>Fatin AI Dashboard</title>
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+
+/* RESET */
 *{
     box-sizing:border-box;
     margin:0;
     padding:0;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    color: white;
-    min-height: 100vh;
-    overflow: hidden;
-    background: linear-gradient(135deg,#000000,#0f0c29,#302b63,#24243e);
+/* BODY */
+body{
+    font-family:'Poppins',sans-serif;
+    color:white;
+    min-height:100vh;
+    overflow:hidden;
+
+    background:linear-gradient(-45deg,#000000,#0f0c29,#302b63,#24243e);
+    background-size:400% 400%;
+    animation:bgMove 15s ease infinite;
 }
 
-/* Canvas for stars */
-#space {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
 }
 
-/* Navbar */
-.navbar {
+/* CANVAS */
+#space{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+/* NAVBAR */
+.navbar{
     display:flex;
-    justify-content:flex-end; /* Logo dah tiada, align kanan */
+    justify-content:space-between;
     align-items:center;
-    padding:15px 30px;
-    background:rgba(0,0,0,0.5);
-    backdrop-filter:blur(10px);
+    padding:20px 30px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.navbar h2{
+    color:#00fff0;
 }
 
 nav a{
     text-decoration:none;
     color:white;
-    padding:6px 12px;
-    border-radius:8px;
+    padding:8px 18px;
+    border-radius:30px;
+    border:1px solid rgba(255,255,255,0.2);
     transition:0.3s;
 }
 
-nav a.active{
-    background:#3e16c2;
-    color:black;
-}
-
 nav a:hover{
-    background:#1b5e20;
+    background:#00fff0;
+    color:black;
+    box-shadow:0 0 15px #00fff0;
 }
 
-/* Container */
+/* TITLE */
+.page-title{
+    text-align:center;
+    margin-top:40px;
+    font-size:28px;
+    color:#ff00ff;
+}
+
+/* CONTAINER */
 .container{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
-    gap:20px;
-    padding:80px 20px 60px;
+    gap:25px;
+    padding:40px 20px 60px;
 }
 
-/* SEMUA CARD SAMA SAIZ 220px */
+/* CARD */
 .card{
-    width:220px;
-    height:160px;
-    padding:15px;
+    width:230px;
+    padding:20px;
     border-radius:20px;
-    background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(10px);
-    box-shadow:0 0 25px rgba(255,255,255,0.2);
+
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.1);
+
     text-align:center;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-}
-
-.card h3{
-    margin-bottom:8px;
-    font-size:16px;
-}
-
-/* Jobsheet group card */
-.jobsheet-group {
-    padding:12px;
-}
-
-.jobsheet-group h3 {
-    margin-bottom:12px;
-    font-size:18px;
-}
-
-/* Button group */
-.btn-group {
-    display:flex;
-    flex-direction:column;
-    gap:4px;
-}
-
-.btn-group .btn-show {
-    padding:6px 12px;
-    font-size:14px;
-}
-
-/* Button TUNGGAL */
-.card:not(.jobsheet-group) .btn-show {
-    padding:6px 12px;
-    font-size:14px;
-    width:100%;
-}
-
-/* Button SAME STYLE AS FATIN */
-.btn-show{
-    background:white;
-    color:#2575fc;
-    font-weight:bold;
-    border-radius:10px;
-    border:none;
-    cursor:pointer;
     transition:0.3s;
-    box-shadow:0 0 8px rgba(255,255,255,0.3);
-    text-decoration:none; /* BUANG LINE BAWAH */
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 0 25px rgba(0,255,255,0.2);
+}
+
+/* TITLE CARD */
+.card h3{
+    margin-bottom:15px;
+    font-size:18px;
+    color:#00fff0;
+}
+
+/* BUTTON GROUP */
+.btn-group{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+/* BUTTON */
+.btn-show{
+    padding:8px;
+    border-radius:20px;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:500;
+
+    background:rgba(255,255,255,0.08);
+    color:white;
+    border:1px solid rgba(255,255,255,0.2);
+
+    transition:0.3s;
 }
 
 .btn-show:hover{
-    background:#2575fc;
-    color:rgb(131,75,210);
-    box-shadow:0 0 16px rgba(77,28,137,0.8);
-    transform:translateY(-2px);
+    background:#ff00ff;
+    color:white;
+    box-shadow:0 0 12px #ff00ff;
+    transform:scale(1.05);
 }
 
-/* Responsive */
+/* RESPONSIVE */
 @media(max-width:768px){
     .card{
         width:45%;
-        height:150px;
-    }
-    .container {
-        padding:60px 10px 40px;
     }
 }
 
 @media(max-width:480px){
     .card{
         width:90%;
-        height:140px;
-    }
-    .container {
-        padding:50px 10px 30px;
     }
 }
+
 </style>
 </head>
+
 <body>
 
 <canvas id="space"></canvas>
 
 <header>
     <div class="navbar">
-        <!-- LOGO DIHAPUSKAN -->
+        <h2>Fatin Dashboard</h2>
         <nav>
-            <a href="about.html" class="active">Back</a>
+            <a href="about.html">Back</a>
         </nav>
     </div>
 </header>
 
+<h2 class="page-title">📂 Jobsheet Collection</h2>
+
 <main>
-    <div class="container">
-        <!-- HTML GROUP -->
-        <div class="card jobsheet-group">
-            <h3>HTML</h3>
-            <div class="btn-group">
-                <a href="Job sheet 1.html" class="btn-show">Jobsheet 1</a>
-                <a href="Job sheet 2.html" class="btn-show">Jobsheet 2</a>
-                <a href="Job sheet 3.html" class="btn-show">Jobsheet 3</a>
-            </div>
-        </div>
+<div class="container">
 
-        <!-- CSS GROUP -->
-        <div class="card jobsheet-group">
-            <h3>CSS</h3>
-            <div class="btn-group">
-                <a href="job sheet 4.html" class="btn-show">Jobsheet 4</a>
-                <a href="Job sheet 5.html" class="btn-show">Jobsheet 5</a>
-                <a href="Job sheet 6.html" class="btn-show">Jobsheet 6</a>
-            </div>
-        </div>
+<!-- HTML -->
+<div class="card">
+    <h3>HTML</h3>
+    <div class="btn-group">
+        <a href="Job sheet 1.html" class="btn-show">Jobsheet 1</a>
+        <a href="Job sheet 2.html" class="btn-show">Jobsheet 2</a>
+        <a href="Job sheet 3.html" class="btn-show">Jobsheet 3</a>
+    </div>
+</div>
 
-        <!-- CSS GROUP -->
-        <div class="card jobsheet-group">
-            <h3>JAVA SCRIPT</h3>
-            <div class="btn-group">
-                <a href="Job sheet 7.html" class="btn-show">Jobsheet 7</a>
-                <a href="Job sheet 8.html" class="btn-show">Jobsheet 8</a>
-                <a href="Job sheet 9.html" class="btn-show">Jobsheet 9</a>
-            </div>
-        </div>
+<!-- CSS -->
+<div class="card">
+    <h3>CSS</h3>
+    <div class="btn-group">
+        <a href="job sheet 4.html" class="btn-show">Jobsheet 4</a>
+        <a href="Job sheet 5.html" class="btn-show">Jobsheet 5</a>
+        <a href="Job sheet 6.html" class="btn-show">Jobsheet 6</a>
+    </div>
+</div>
 
-        <!-- CSS GROUP -->
-        <div class="card jobsheet-group">
-            <h3>JQUERY</h3>
-            <div class="btn-group">
-                <a href="jquery1.html" class="btn-show">JQuery 1</a>
-                <a href="event.html" class="btn-show">JQuery 2</a>
-                <!-- <a href="Job sheet 8.html" class="btn-show">Jobsheet 8</a>
-                <a href="Job sheet 9.html" class="btn-show">Jobsheet 9</a> -->
-            </div>
-        </div>
+<!-- JS -->
+<div class="card">
+    <h3>JavaScript</h3>
+    <div class="btn-group">
+        <a href="Job sheet 7.html" class="btn-show">Jobsheet 7</a>
+        <a href="Job sheet 8.html" class="btn-show">Jobsheet 8</a>
+        <a href="Job sheet 9.html" class="btn-show">Jobsheet 9</a>
+    </div>
+</div>
 
-         <!-- CSS GROUP -->
-        <div class="card jobsheet-group">
-            <h3>WEB STORAGE</h3>
-            <div class="btn-group">
-                <a href="hapus nama.html" class="btn-show">Web Storage 1</a>
-                <a href="dark mode.html" class="btn-show">Web Storage 2</a>
-                <!-- <a href="Job sheet 8.html" class="btn-show">Jobsheet 8</a>
-                <a href="Job sheet 9.html" class="btn-show">Jobsheet 9</a> -->
-            </div>
-        </div>
+<!-- JQUERY -->
+<div class="card">
+    <h3>jQuery</h3>
+    <div class="btn-group">
+        <a href="jquery1.html" class="btn-show">JQuery 1</a>
+        <a href="event.html" class="btn-show">JQuery 2</a>
+    </div>
+</div>
 
-        <!-- SINGLE BUTTON
-        <div class="card">
-            <h3>Jobsheet 7</h3>
-            <button class="btn-show">Show</button>
-        </div>
-        <div class="card">
-            <h3>Jobsheet 8</h3>
-            <button class="btn-show">Show</button>
-        </div>
-        <div class="card">
-            <h3>Jobsheet 9</h3>
-            <button class="btn-show">Show</button>
-        </div>
-    </div> -->
+<!-- STORAGE -->
+<div class="card">
+    <h3>Web Storage</h3>
+    <div class="btn-group">
+        <a href="hapus nama.html" class="btn-show">Storage 1</a>
+        <a href="dark mode.html" class="btn-show">Storage 2</a>
+    </div>
+</div>
+
+</div>
 </main>
 
 <script>
 const canvas=document.getElementById("space");
 const ctx=canvas.getContext("2d");
+
 canvas.width=window.innerWidth;
 canvas.height=window.innerHeight;
 
 let stars=[];
-for(let i=0;i<150;i++){
+for(let i=0;i<180;i++){
     stars.push({
         x:Math.random()*canvas.width,
         y:Math.random()*canvas.height,
-        radius:Math.random()*1.5,
+        radius:Math.random()*1.2,
         alpha:Math.random(),
         speed:Math.random()*0.02
     });
@@ -259,16 +252,22 @@ for(let i=0;i<150;i++){
 
 function animate(){
     ctx.clearRect(0,0,canvas.width,canvas.height);
+
     stars.forEach(star=>{
         star.alpha+=star.speed;
-        if(star.alpha<=0||star.alpha>=1) star.speed=-star.speed;
+        if(star.alpha<=0||star.alpha>=1){
+            star.speed*=-1;
+        }
+
         ctx.beginPath();
         ctx.arc(star.x,star.y,star.radius,0,Math.PI*2);
         ctx.fillStyle="rgba(255,255,255,"+star.alpha+")";
         ctx.fill();
     });
+
     requestAnimationFrame(animate);
 }
+
 animate();
 
 window.addEventListener("resize",()=>{
