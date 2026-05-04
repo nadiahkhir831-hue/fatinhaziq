@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(58, 112, 30);
+    padding: 100px 10% 0 10%;
+    font-size: 1.4rem;
+    font-family: sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+    color: #000000;
+}
+
+.utama {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr;
+    column-gap: 30px;
+}
+
+.pertama {
+    background-color: rgb(49, 158, 65);
+    padding: 30px;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+.beli {
+    background-color: rgb(197, 76, 76);
+    border-radius: 3px;
+    padding: 10px 40px;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.kedua {
+    background-color: rgb(49, 158, 65);
+    padding: 30px;
+    border-radius: 5px;
+}
+
+/* Container troli supaya item turun ke bawah */
+#troli {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Item troli */
+.kandungan-kedua {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.teks-kiri {
+    flex: 1;
+}
+
+/* Button buang */
+.buang {
+    background-color: rgb(197, 76, 76);
+    border-radius: 4px;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.1rem;
+    color: white;
+}
+
+/* Jumlah harga */
+.jumlah {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 2px solid rgba(255,255,255,0.2);
+}
+
+.bold {
+    font-weight: bold;
+}
