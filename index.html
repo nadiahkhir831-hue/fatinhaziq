@@ -4,9 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Project 20%</title>
+<title>JobSheet AI Website</title>
 
-<!-- GOOGLE FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
@@ -22,17 +21,14 @@
 body{
     font-family:'Poppins',sans-serif;
     color:white;
-    display:flex;
-    flex-direction:column;
     min-height:100vh;
-    overflow-x:hidden;
 
     background:linear-gradient(-45deg,#000000,#0f0c29,#302b63,#24243e);
     background-size:400% 400%;
     animation:bgMove 15s ease infinite;
 }
 
-/* BACKGROUND ANIMATION */
+/* BG ANIMATION */
 @keyframes bgMove{
     0%{background-position:0% 50%;}
     50%{background-position:100% 50%;}
@@ -52,16 +48,15 @@ body{
 /* HEADER */
 header{
     text-align:center;
-    padding:40px 20px;
+    padding:30px 20px;
     background:rgba(255,255,255,0.05);
     backdrop-filter:blur(15px);
     border-bottom:1px solid rgba(255,255,255,0.1);
 }
 
 header h1{
-    font-size:2.8em;
+    font-size:clamp(1.8rem, 3vw, 2.5rem);
     color:#00fff0;
-    text-shadow:0 0 10px #00fff0;
 }
 
 /* NAV */
@@ -71,63 +66,73 @@ nav{
 
 nav a{
     text-decoration:none;
-    margin:0 10px;
-    padding:10px 20px;
+    margin:5px;
+    padding:8px 16px;
     border-radius:30px;
-    font-weight:600;
+    font-size:14px;
+
     color:#fff;
     background:rgba(255,255,255,0.05);
     border:1px solid rgba(255,255,255,0.2);
+
     transition:0.3s;
 }
 
 nav a:hover{
     background:#00fff0;
     color:black;
-    box-shadow:0 0 15px #00fff0;
+    box-shadow:0 0 10px #00fff0;
 }
 
-/* MAIN */
-main{
-    flex:1;
+/* MAIN WRAPPER (IMPORTANT) */
+.wrapper{
     display:flex;
     justify-content:center;
-    align-items:center;
-    padding:40px 20px;
+    padding:40px 15px;
 }
 
-/* GLASS CARD */
+/* CARD */
 .card{
+    width:100%;
+    max-width:650px; /* 🔥 ini bagi tak kembang kat laptop */
+    
     background:rgba(255,255,255,0.05);
     backdrop-filter:blur(20px);
-    padding:40px;
+
+    padding:30px;
     border-radius:20px;
     border:1px solid rgba(255,255,255,0.1);
-    max-width:700px;
+
     text-align:center;
     box-shadow:0 0 40px rgba(0,255,255,0.1);
 }
 
+/* TEXT */
 .card h2{
-    font-size:2em;
+    font-size:clamp(1.5rem, 2.5vw, 2rem);
     color:#ff00ff;
-    margin-bottom:20px;
+    margin-bottom:15px;
 }
 
 .card p{
-    font-size:1.1em;
+    font-size:clamp(0.95rem, 1.2vw, 1.1rem);
     color:#ddd;
-    line-height:1.8;
+    line-height:1.7;
 }
 
 /* FOOTER */
 footer{
     text-align:center;
-    padding:20px;
-    background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(10px);
-    font-size:0.9em;
+    padding:15px;
+    font-size:0.85rem;
     color:#aaa;
+}
+
+/* EXTRA MOBILE FIX */
+@media(max-width:480px){
+    .card{
+        padding:20px;
+    }
 }
 
 </style>
@@ -135,17 +140,17 @@ footer{
 
 <body>
 
-<!-- BACKGROUND -->
 <canvas id="space"></canvas>
 
 <header>
-    <h1>🚀 PROJECT 20%h1>
+    <h1>🚀 JobSheet AI Website</h1>
     <nav>
+        <a href="#">Home</a>
         <a href="about.html">About</a>
     </nav>
 </header>
 
-<main>
+<div class="wrapper">
     <div class="card">
         <h2>Introduction</h2>
         <p>
@@ -157,13 +162,12 @@ footer{
             keeps the submission process more organized.
         </p>
     </div>
-</main>
+</div>
 
 <footer>
-    <p>© 2026 JobSheet</p>
+    <p>© 2026 JobSheet AI Website</p>
 </footer>
 
-<!-- STAR ANIMATION -->
 <script>
 const canvas = document.getElementById("space");
 const ctx = canvas.getContext("2d");
@@ -173,7 +177,7 @@ canvas.height = window.innerHeight;
 
 let stars = [];
 
-for(let i=0;i<180;i++){
+for(let i=0;i<150;i++){
     stars.push({
         x:Math.random()*canvas.width,
         y:Math.random()*canvas.height,
