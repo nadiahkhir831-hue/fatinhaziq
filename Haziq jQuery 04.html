@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Tutorial Haziq</title>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial;
+        background: #ffe9e9;
+    }
+
+    .header {
+        background: rgb(112, 124, 110);
+        color: black;
+        text-align: center;
+        padding: 20px;
+        font-size: 22px;
+    }
+
+    .container {
+        padding: 30px;
+    }
+
+    button {
+        padding: 10px 15px;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+
+    #kotak {
+        background: #ddd;
+        padding: 15px;
+        margin-bottom: 20px;
+        min-height: 80px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    jQuery Tutorial Haziq
+</div>
+
+<div class="container">
+
+    <button id="loadBtn">Load Book Data</button>
+
+    <div id="kotak">
+        Click the button to load data...
+    </div>
+
+    <ul id="bookregister"></ul>
+
+</div>
+
+<script>
+$(document).ready(function(){
+
+    $("#loadBtn").click(function(){
+
+        $.getJSON("./book.json", function(data){
+
+            $("#bookregister").empty();
+
+            $.each(data, function(i, book){
+                $("#bookregister").append(
+                    "<li>" + book.title + " - " + book.author + "</li>"
+                );
+            });
+
+            $("#kotak").text("Data successfully retrieved");
+            alert("File successfully loaded");
+
+        }).fail(function(){
+
+            $("#kotak").text("Failed to retrieve data");
+            alert("File failed to load");
+
+        });
+
+    });
+
+});
+</script>
+
+</body>
+</html>
