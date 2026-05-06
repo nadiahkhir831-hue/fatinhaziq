@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>Haziq's Corner</title>
+  <script src="C:\Users\Mohd Haziq Afiq\Downloads\selector\jquery-4.0.0.min.js"></script>
+  <style>
+    body{
+      font-size:17px;
+      font-family: Arial;
+    }
+    .header{
+      text-align: center;
+      padding: 20px;
+      background-color: rgb(112, 124, 110);
+      color: black;
+    }
+
+    .container{
+      padding: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>TUTORIAL JQUERY HAZIQ</h1>
+  </div>
+
+  <h2 class="judul1">Judul 1</h2>
+    <p>The Aston Martin Vantage GT3 (2024) is a next-generation GT3 race car built for top-level endurance competitions.
+      It uses a <b>twin-turbo 4.0-litre V8 engine</b> paired with a lightweight aluminium chassis for strong performance.
+      The car features redesigned aerodynamics to improve downforce and stability on track.
+      Its suspension and electronics are optimized for better handling and driver control.
+      Overall, it represents Aston Martin’s latest step in professional GT racing evolution.</p>
+    <br><br>
+    <h2 id="judul2">Judul 2</h2>
+    <p class="p2">The Ford Mustang GTD is an extreme, road-legal supercar inspired by GT3 racing technology.
+      It is powered by a <b>high-performance V8 engine designed for both speed and track capability.</b>
+      The car includes advanced aerodynamics and extensive carbon fibre construction.
+      It also features race-derived suspension systems for precision handling.
+      Overall, the GTD bridges the gap between race car engineering and road-going performance.</p>
+    </div>
+
+<ul class="daftar">
+  <li>Vulcan</li>
+  <li>Valour</l1>
+  <li>Valiant</li>
+  <li>GT Le Mans GTE</li>
+  <li>GT (2017)</li>
+  <li>Focus RS</li>
+</ul>
+
+<input type="button" value="Get In" name="switch"/>
+<input type="text" value=""/>
+<input type="submit" value="Submit"/>
+<input type="reset" value="Reset" name="reset"/>
+<br><br>
+
+<script type="text/javascript">
+
+  //$('h2.judul1').hide();
+  //$('h2#judul2').hide();
+
+  $('.p2 b').css('color','blue')
+
+  $('.daftar li:first').css('color','red');
+  $('.daftar li:last').css('color','blue');
+  $('.daftar li:even').css('background','yellow');
+  $('.daftar li:odd').css('background','green');
+  $('.daftar li:nth-child(3n)').css('list-style','square');
+
+  $('[value="reset"]').hide();
+</script>
+
+  </body>
+</html>
