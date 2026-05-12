@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial jQuery Fatin</title>
+
+    <!-- ✅ Use CDN (no file error) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        .header {
+            background-color: rgb(0, 153, 8);
+            padding: 20px;
+            text-align: center;
+            color: blue;
+        }
+
+        .container {
+            padding: 50px;
+            text-align: center;
+        }
+
+        button {
+            padding: 12px 24px;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 8px;
+            border: none;
+            font-weight: bold;
+        }
+
+        #tombol { 
+            background-color: #e74c3c; 
+            color: white; 
+        }
+
+        #tombol2 { 
+            background-color: #2ecc71; 
+            color: white; 
+        }
+
+        #gbr1 {
+            margin-top: 30px;
+            border: 5px solid #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        /* ✨ small hover animation */
+        #gbr1:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Tutorial jQuery Fatin</h1>
+    </div>
+
+    <div class="container">
+        <h2>Mouse Event Demo</h2>
+        
+        <button id="tombol">Hide</button>
+        <button id="tombol2">Show</button>
+
+        <br><br>
+
+        <!-- ✅ Make sure images exist in same folder -->
+        <img id="gbr1" src="am.png" width="300" alt="Image"/>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+
+            // Hover enter → change image
+            $('#gbr1').on('mouseenter', function() {
+                $(this).attr('src', 'am.png');
+            });
+
+            // Hover leave → back to original
+            $('#gbr1').on('mouseleave', function() {
+                $(this).attr('src', 'mustang.png');
+            });
+
+            // Hide image with animation
+            $('#tombol').on('click', function() {
+                $('#gbr1').fadeOut();
+            });
+
+            // Show image with animation
+            $('#tombol2').on('click', function() {
+                $('#gbr1').fadeIn();
+            });
+
+        });
+    </script>
+
+</body>
+</html>
